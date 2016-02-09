@@ -17,7 +17,7 @@
         /* jshint validthis: true */
         var vm = this;
 
-        vm.isMenuVisible = false;
+        vm.isMenuVisible = true;
 
         /*************************
          *     PRIVATE VARIABLE   *
