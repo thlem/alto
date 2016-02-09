@@ -1,4 +1,4 @@
-<span class="menu-open">
+<span class="menu-open" ng-click="altoMenuController.isMenuVisible=true">
     <span class="menu-ico-1"></span>
     <span class="menu-ico-2"></span>
     <span class="menu-ico-3"></span>
@@ -9,3 +9,7 @@
         <span class="menu-open-title-char-4">u</span>
     </span>
 </span>
+
+<nav role="navigation" ng-if="altoMenuController.isMenuVisible">
+    <span class="navigation-close" ng-click="altoMenuController.isMenuVisible = false">Fermer</span>
+</nav>
