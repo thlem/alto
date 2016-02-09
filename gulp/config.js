@@ -39,7 +39,7 @@ module.exports = {
             PROD: [app + '**/*.html']
         },
         IMAGES: {
-            PROD: [app + '**/*.jpg']
+            PROD: [app + '**/*.jpg', app + '**/*.png']
         },
         FONTS: {
             DEV: [],

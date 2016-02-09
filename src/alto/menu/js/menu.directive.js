@@ -6,15 +6,15 @@
      * Directive  : altoMenu
      * Description : directiveDescription
      */
-    angular.module('alto.menu').controller('altoMenu', altoMenu);
+    angular.module('alto.menu').directive('altoMenu', altoMenu);
 
     /* @ngInject */
     function altoMenu() {
 
         var directive = {
             bindToController: true,
-            controller: 'AltoMenu',
-            controllerAs: 'altoMenu',
+            controller: 'AltoMenuController',
+            controllerAs: 'altoMenuController',
             restrict: 'EA',
             templateUrl: 'alto/menu/menu.html',
             scope: {},

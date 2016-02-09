@@ -1,0 +1,143 @@
+.menu-open{
+    background: rgba(41, 174, 204, 0.9);
+    width:75px;
+    height:75px;
+    border-radius:75px;
+    position: fixed;
+    transform: translate(20px, 20px);
+    display: block;
+    cursor: pointer;
+    position:relative;
+}
+.menu-ico-1 {
+    position:absolute;
+    transform: translate(12px, 25px);
+    display:block;
+    width:50px;
+    height:2px;
+    background: #FFFFFF;
+}
+.menu-ico-2 {
+    position:absolute;
+    transform: translate(12px, 35px);
+    display:block;
+    width:50px;
+    height:2px;
+    background: #FFFFFF;
+}
+.menu-ico-3 {
+    position:absolute;
+    transform: translate(12px, 45px);
+    display:block;
+    width:50px;
+    height:2px;
+    background: #FFFFFF;
+}
+.menu-open-title span{
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(41, 174, 204, 0.9);
+}
+.menu-open-title-char-1 {
+    transform: translate(10px, 17px) rotate(-55deg);
+    opacity:0;
+}
+.menu-open-title-char-2 {
+    transform: translate(28px, 0px) rotate(-12deg);
+    opacity:0;
+}
+.menu-open-title-char-3 {
+    transform: translate(50px, 5px) rotate(42deg);
+    opacity:0;
+}
+.menu-open-title-char-4 {
+    transform: translate(62px, 22px) rotate(68deg);
+    opacity:0;
+}
+
+.menu-open:hover .menu-open-title-char-1{
+    animation-name: menu-char-1-hover;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes menu-char-1-hover{
+    from{
+        transform: translate(17px, 17px) rotate(-40deg);
+    }
+    to{
+        transform: translate(7px, -7px) rotate(-40deg);
+        opacity:1;
+    }
+}
+.menu-open:hover .menu-ico-1{
+    animation-name: menu-ico-1-hover;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes menu-ico-1-hover{
+    from{
+        transform: translate(12px, 25px);
+    }
+    to{
+        transform: translate(12px, 18px);
+    }
+}
+
+.menu-open:hover .menu-open-title-char-2{
+    animation-name: menu-char-2-hover;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes menu-char-2-hover{
+    from{
+        transform: translate(32px, 10px) rotate(-15deg);
+    }
+    to{
+        transform: translate(26px, -14px) rotate(-5deg);
+        opacity:1;
+    }
+}
+
+.menu-open:hover .menu-open-title-char-3{
+    animation-name: menu-char-3-hover;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes menu-char-3-hover{
+    from{
+        transform: translate(32px, 10px) rotate(-15deg);
+    }
+    to{
+        transform: translate(41px, -14px) rotate(12deg);
+        opacity:1;
+    }
+}
+.menu-open:hover .menu-ico-3{
+    animation-name: menu-ico-3-hover;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes menu-ico-3-hover{
+    from{
+        transform: translate(12px, 45px);
+    }
+    to{
+        transform: translate(12px, 52px);
+    }
+}
+
+.menu-open:hover .menu-open-title-char-4{
+    animation-name: menu-char-4-hover;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes menu-char-4-hover{
+    from{
+        transform: translate(62px, 22px) rotate(68deg);
+    }
+    to{
+        transform: translate(55px, -9px) rotate(25deg);
+        opacity:1;
+    }
+}

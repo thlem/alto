@@ -6,7 +6,7 @@
      * Description : moduleDescription
      */
     angular.module('alto.technical.core', [
-
+        'alto.technical'
     ]);
 
 })();

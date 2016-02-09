@@ -33,6 +33,7 @@ gulp.task('generate-sources', function(callback){
         'generate-templatecache', // Take all html files and generate it in a JS angular file
         'generate-scripts', // Generate JS app file
         'generate-styles', // Generate CSS app file
+        'generate-images', // Place images in the right folder
         callback
     );
 });
@@ -72,5 +73,12 @@ gulp.task('generate-styles', function(){
     return gulp.src(config.FILTERS.STYLES.CSS.PROD)
         .pipe($.concat('app.css'))
         .pipe(gulp.dest(config.FOLDERS.GENERATED_STYLES));
+});
+
+gulp.task('generate-images', function(){
+
+    return gulp.src(config.FILTERS.IMAGES.PROD)
+        .pipe(gulp.dest(config.FOLDERS.GENERATED_IMAGES));
+
 });
 
