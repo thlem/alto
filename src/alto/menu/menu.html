@@ -1,4 +1,4 @@
-<span class="menu-open" ng-click="altoMenuController.isMenuVisible=true">
+<span class="menu-open" ng-click="altoMenuController.showMenu()">
     <span class="menu-ico-1"></span>
     <span class="menu-ico-2"></span>
     <span class="menu-ico-3"></span>
@@ -11,16 +11,21 @@
 </span>
 
 <nav role="navigation" ng-if="altoMenuController.isMenuVisible">
-    <span class="navigation-close" ng-click="altoMenuController.isMenuVisible = false">Fermer</span>
-    <ul>
+    <span class="navigation-close" ng-click="altoMenuController.hideMenu()">Fermer</span>
+    <ul ng-if="!altoMenuController.user">
         <li>
-            <a href="#">Home</a>
+            <a ui-sref="home" ng-click="altoMenuController.hideMenu()">Home</a>
         </li>
         <li>
-            <a href="#">Sign In</a>
+            <a ui-sref="signin" ng-click="altoMenuController.hideMenu()">Sign In</a>
         </li>
         <li>
-            <a href="#">Sign Up</a>
+            <a ui-sref="signup" ng-click="altoMenuController.hideMenu()">Sign Up</a>
+        </li>
+    </ul>
+    <ul ng-if="altoMenuController.user">
+        <li>
+            <a ui-sref="signoff" ng-click="altoMenuController.hideMenu()">Sign Off</a>
         </li>
     </ul>
 </nav>

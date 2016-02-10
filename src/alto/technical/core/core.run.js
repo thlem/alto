@@ -9,7 +9,7 @@
 
     /* @ngInject */
     function RunFunction($log) {
-        console.log('START')
+        $log.info('START')
     }
 
 })();

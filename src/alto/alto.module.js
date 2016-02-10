@@ -6,7 +6,8 @@
      * Description : moduleDescription
      */
     angular.module('alto', [
-        'alto.menu'
+        'ui.router',
+        'alto.technical'
     ]);
 
 })();

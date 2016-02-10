@@ -6,7 +6,9 @@
      * Description : moduleDescription
      */
     angular.module('alto.technical.core', [
-        'alto.technical'
+        'alto.menu',
+        'alto.home',
+        'alto.signin'
     ]);
 
 })();

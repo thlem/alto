@@ -9,7 +9,7 @@
     angular.module('alto.menu').controller('AltoMenuController', AltoMenuController);
 
     /* @ngInject */
-    function AltoMenuController($log) {
+    function AltoMenuController($log, UserModel) {
         
         /*************************
          *     PUBLIC VARIABLE    *
@@ -17,7 +17,8 @@
         /* jshint validthis: true */
         var vm = this;
 
-        vm.isMenuVisible = true;
+        vm.isMenuVisible = false;
+        vm.user = UserModel;
 
         /*************************
          *     PRIVATE VARIABLE   *
@@ -27,6 +28,17 @@
          /*************************
          *     PUBLIC METHOD      *
          **************************/
+         vm.showMenu = showMenu;
+         vm.hideMenu = hideMenu;
+
+         function showMenu() {
+            vm.isMenuVisible = true;
+         }
+
+         function hideMenu() {
+            vm.isMenuVisible = false;
+         }
+
 
 
          /*************************

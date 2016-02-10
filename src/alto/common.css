@@ -9,13 +9,16 @@ html, body {
     position:relative;
 }
 body {
-    background:#FFFFF;
+    background:#FFFFFF;
     color:#333333;
     font-family:"Lato",sans-serif;
 }
 .global-wrapper {
     width:90%;
-    height:100%;
     z-index:0;
     margin:auto;
+}
+.global-wrapper > div {
+    margin-top:15px;
+    margin-left:15px;
 }
