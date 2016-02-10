@@ -1,13 +1,13 @@
 <div class="signin">
     
-    <form>
+    <form ng-submit="signInController.processLogin()">
         
         <div class="sign-field">
-            <input type="text" />
+            <input type="text" required id="altologin" name="altologin" ng-model="signInController.login" />
             <label>Your Login</label>
         </div>
         <div class="sign-field">
-            <input type="password" />
+            <input type="password" required id="altopwd" name="altopwd" ng-model="signInController.password" />
             <label>Your Password</label>
         </div>
 

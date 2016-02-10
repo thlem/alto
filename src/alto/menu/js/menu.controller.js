@@ -30,6 +30,7 @@
          **************************/
          vm.showMenu = showMenu;
          vm.hideMenu = hideMenu;
+         vm.isUserConnected = isUserConnected;
 
          function showMenu() {
             vm.isMenuVisible = true;
@@ -37,6 +38,13 @@
 
          function hideMenu() {
             vm.isMenuVisible = false;
+         }
+
+         function isUserConnected() {
+            if(angular.equals({}, vm.user)){
+                return false;
+            }
+            return true;
          }
 
 

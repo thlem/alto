@@ -8,7 +8,8 @@
     angular.module('alto.technical.core', [
         'alto.menu',
         'alto.home',
-        'alto.signin'
+        'alto.signin',
+        'alto.notifications'
     ]);
 
 })();

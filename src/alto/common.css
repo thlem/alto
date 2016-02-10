@@ -22,3 +22,12 @@ body {
     margin-top:15px;
     margin-left:15px;
 }
+header {
+    position:absolute;
+    transform: transform(0, 0);
+    width:100%;
+}
+header h1, header h2 {
+    text-align:center;
+    color:rgb(41, 174, 204);
+}

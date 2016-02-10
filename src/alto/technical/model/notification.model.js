@@ -3,13 +3,13 @@
 
     /**
      * Module      : alto.technical.model
-     * Factory  : UserModel
+     * Factory  : NotificationModel
      * Description : FactoryDescription
      */
-    angular.module('alto.technical.model').factory('UserModel', UserModel);
+    angular.module('alto.technical.model').factory('NotificationModel', NotificationModel);
 
     /* @ngInject */
-    function UserModel() {
+    function NotificationModel($log) {
         
         /*************************
          *     PUBLIC VARIABLE    *
@@ -24,9 +24,9 @@
         /*************************
          *     SERVICE RETURN     *
          **************************/
-        var user = {};
+        var notifications = [];
 
-        return user;
+        return notifications;
 
         /*************************
          *     PUBLIC METHOD      *

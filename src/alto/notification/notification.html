@@ -1,0 +1,7 @@
+<li ng-class="{ 'notification-error': currentNotificationController.currentNotification.type === 'error',  
+                'notification-info': currentNotificationController.currentNotification.type === 'info'}">
+
+    <span ng-bind="::currentNotificationController.currentNotification.message"></span>
+    <progress max="100" value="{{currentNotificationController.currentTimeoutProgress}}"></progress>
+
+</li>

@@ -1,0 +1,50 @@
+.notifications {
+    position:absolute;
+    bottom:10px;
+    right:10px;
+}
+.notifications ul {
+    max-width: 200px;
+    overflow:hidden;
+}
+.notifications ul li {
+    width:175px;
+    border-width: 2px;
+    padding:10px;
+    text-align: center;
+    position:relative;
+    padding-top:20px;
+    margin-top:5px;
+}
+.notifications ul li:after {
+    content:'x';
+    position:absolute;
+    top:2px;
+    left:5px;
+}
+.notifications ul li.notification-error {
+    border-color: rgb(102, 0, 0);
+    background: rgb(255, 77, 77);
+    color:rgb(102, 0, 0);
+}
+.notifications ul li.notification-error:hover {
+    cursor:pointer;
+    background: rgb(255, 51, 51);
+}
+.notifications ul li.notification-info {
+    border-color: rgb(0, 51, 204);
+    background: rgb(128, 159, 255);
+    color:rgb(0, 51, 204);
+}
+.notifications ul li.notification-info:hover {
+    cursor:pointer;
+    background: rgb(102, 140, 255);
+}
+progress {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:195px;
+    height:3px;
+    background:#333;
+}
