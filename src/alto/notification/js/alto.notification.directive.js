@@ -15,7 +15,7 @@
             bindToController: true,
             controllerAs: 'currentNotificationController',
             restrict: 'EA',
-            templateUrl: 'alto/notification/notification.html',
+            templateUrl: 'alto/notification/alto.notification.html',
             scope: {
                 currentNotification: '=',
                 currentNotificationKey: '='
@@ -26,14 +26,21 @@
             },
             link: function(scope, element, attrs, currentNotificationController) {
                 var currentInterval;
+
+                // The number of iteration to have 100% progress
+                var intervalIterationNumber = 41;
+                // 3000 is 3sec
+                var intervalLimit = 3000 / intervalIterationNumber;
+                var progressPercentageGap = 2.5;
+
                 scope.startTimeout = function() {
 
                     currentInterval = $interval(function() {
-                        currentNotificationController.currentTimeoutProgress += 2.5;
-                        if(currentNotificationController.currentTimeoutProgress === 102.5) {
+                        currentNotificationController.currentTimeoutProgress += progressPercentageGap;
+                        if(currentNotificationController.currentTimeoutProgress > 100) {
                             NotificationModel.splice(currentNotificationController.currentNotificationKey, 1);
                         }
-                    }, 50, 41);
+                    }, intervalLimit, intervalIterationNumber);
                 };
 
                 scope.startTimeout();

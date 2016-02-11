@@ -16,7 +16,7 @@
             controller: 'SignInController',
             controllerAs: 'signInController',
             restrict: 'EA',
-            templateUrl: 'alto/signin/signin.html',
+            templateUrl: 'alto/authentication/signin/alto.signin.html',
             scope: {},
             link: function() {}
         };

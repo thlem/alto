@@ -3,13 +3,18 @@
 
     /**
      * Module      : alto.technical.services
-     * Factory  : UserService
-     * Description : FactoryDescription
+     * Factory     : UserService
+     * Description : This factory provide methods that allow to communicate with the REST API for user manipulation
+     *               and provide methods to manage users.
      */
     angular.module('alto.technical.services').factory('UserService', UserService);
 
     /* @ngInject */
-    function UserService($log, UserModel, $q, NotificationModel) {
+    function UserService(
+        /** Angular provider */
+        $log, $q,
+        /** Alto Models */
+        UserModel, NotificationModel) {
         
         /*************************
          *     PUBLIC VARIABLE    *
@@ -19,7 +24,10 @@
         /*************************
          *     PRIVATE VARIABLE   *
          **************************/
+
+         // The user bind with the model. Each modification to this variable change the model content.
          var user = UserModel;
+         // The notifications bind with the model. Each modification to this variable change the model content.
          var notifications = NotificationModel;
 
 
@@ -36,12 +44,23 @@
          *     PUBLIC METHOD      *
          **************************/
 
+         /**
+          * This method call the REST API to check if the given login and password are correct
+          * Populate the user model and manage success / error with notifications
+          * @param login : The login of the user
+          * @param password : The password of the user
+          */
          function authenticateUser(login, password) {
 
+            // Initialize the promise
             var deffered = $q.defer();
 
-            // todo server call
+            /**
+             * [TODO] Make a REST call with login and password as parameters.
+             */
             
+            // [TODO] Start of code to replace by the REST call
+
             if(login === "admin" && password === "admin") {
 
                 user.login = login;
@@ -59,6 +78,7 @@
                 })
                 deffered.reject();
             }
+            // [TODO] End of code to replace by the REST call
 
             return deffered.promise;
 

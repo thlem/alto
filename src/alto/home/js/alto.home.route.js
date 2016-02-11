@@ -14,7 +14,7 @@
             url: '/',
             views: {
                 'content': {
-                    templateUrl: 'alto/home/home.html'  
+                    templateUrl: 'alto/home/alto.home.html'  
                 }
             }
         });

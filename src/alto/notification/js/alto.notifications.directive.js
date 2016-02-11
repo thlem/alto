@@ -16,7 +16,7 @@
             controller: 'NotificationsController',
             controllerAs: 'notificationsController',
             restrict: 'EA',
-            templateUrl: 'alto/notification/notifications.html',
+            templateUrl: 'alto/notification/alto.notifications.html',
             scope: {},
             link: function() {}
         };

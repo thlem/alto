@@ -3,7 +3,7 @@
     
     /**
      * Module      : alto.technical.services
-     * Description : moduleDescription
+     * Description : This module provide all Services that make REST call and manage models
      */
     angular.module('alto.technical.services', [
 
