@@ -2,14 +2,14 @@
     'use strict';
 
     /**
-     * Module      : my.core
-     * Description : RunDescription
+     * Module      : alto.technical.core
+     * Description : This Run function is run at the start of the app
      */
     angular.module('alto.technical.core').run(RunFunction);
 
     /* @ngInject */
     function RunFunction($log) {
-        $log.info('START')
+        $log.debug('[START] Alto core is running');
     }
 
 })();

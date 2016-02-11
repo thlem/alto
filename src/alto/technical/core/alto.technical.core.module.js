@@ -2,8 +2,9 @@
     'use strict';
 
     /**
-     * Module      : my.core
-     * Description : moduleDescription
+     * Module      : alto.technical.core
+     * Description : This module load all functional components of the app and do some stuff at the 
+     *               start of the app
      */
     angular.module('alto.technical.core', [
         'alto.menu',

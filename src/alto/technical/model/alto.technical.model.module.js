@@ -3,7 +3,7 @@
     
     /**
      * Module      : alto.technical.model
-     * Description : moduleDescription
+     * Description : This module provide all Model used by all app components
      */
     angular.module('alto.technical.model', [
 

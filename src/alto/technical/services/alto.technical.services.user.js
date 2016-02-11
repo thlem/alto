@@ -12,7 +12,7 @@
     /* @ngInject */
     function UserService(
         /** Angular provider */
-        $log, $q,
+        $q,
         /** Alto Models */
         UserModel, NotificationModel) {
         
