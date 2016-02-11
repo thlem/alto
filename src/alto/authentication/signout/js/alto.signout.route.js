@@ -2,21 +2,22 @@
     'use strict';
 
     /**
-     * Module      : alto.signin
+     * Module      : alto.signout
      * Description : ConfigDescription
      */
-    angular.module('alto.signin').config(ConfigFunction);
+    angular.module('alto.signout').config(ConfigFunction);
 
     /* @ngInject */
     function ConfigFunction($stateProvider) {
         
-        $stateProvider.state('signIn', {
-            url: '/signin',
+        $stateProvider.state('signOut', {
+            url: '/signout',
             views: {
                 'content': {
-                    template: '<sign-in></signin>'
+                    controller: 'SignoutController'
                 }
             }
+            
         });
 
     }

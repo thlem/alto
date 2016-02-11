@@ -8,6 +8,10 @@
     display: block;
     cursor: pointer;
     position:relative;
+    z-index:105;
+}
+.menu-open.active {
+    box-shadow: 0 0 2px #333;
 }
 .menu-ico-1 {
     position:absolute;
@@ -37,7 +41,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  color: rgba(41, 174, 204, 0.9);
+  color: rgba(0, 52, 48, 0.9);
 }
 .menu-open-title-char-1 {
     transform: translate(10px, 17px) rotate(-55deg);
@@ -146,17 +150,10 @@ nav {
     top:0;
     left:0;
     background: rgba(41, 174, 204, 0.95);
-    width:100%;
+    width:120px;
     height:100%;
-    z-index: 99999;
-}
-nav .navigation-close {
-    color: #FFFFFF;
-    font-weight: bold;
-    letter-spacing: 1px;
-    padding:5px;
-    display: block;
-    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 0 2px #333;
 }
 nav a {
     color: #FFFFFF;
@@ -164,13 +161,14 @@ nav a {
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
-    border-bottom: 3px dotted #FFFFFF;
-    padding-bottom:10px;
+    padding:0 5px 10px 0;
+    font-size:14px;
 }
 nav ul {
-    width:50%;
+    width:100%;
     height:100%;
     margin:auto;
+    margin-top:35px;
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -180,4 +178,5 @@ nav ul li {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: right;
 }

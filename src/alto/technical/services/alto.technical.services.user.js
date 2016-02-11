@@ -35,7 +35,8 @@
          *     SERVICE RETURN     *
          **************************/
         var service = {
-            authenticateUser: authenticateUser
+            authenticateUser: authenticateUser,
+            logoutUser: logoutUser
         };
 
         return service;
@@ -74,10 +75,32 @@
             else{
                 notifications.push({
                     type: 'error',
-                    message: 'Authentication error, the login or password could be wrong.'
+                    message: 'Authentication error, the login or password could be wrong'
                 })
                 deffered.reject();
             }
+            // [TODO] End of code to replace by the REST call
+
+            return deffered.promise;
+
+         }
+
+         function logoutUser() {
+
+            // Initialize the promise
+            var deffered = $q.defer();
+
+            /**
+             * [TODO] Make a REST call with login and password as parameters.
+             */
+            
+            angular.copy({}, user);
+            notifications.push({
+                    type: 'info',
+                    message: 'You have been disconnected'
+                })
+            deffered.resolve();
+
             // [TODO] End of code to replace by the REST call
 
             return deffered.promise;

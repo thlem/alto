@@ -1,4 +1,5 @@
-<span class="menu-open" ng-click="altoMenuController.showMenu()">
+<!-- The open menu button -->
+<span class="menu-open" ng-click="altoMenuController.showHideMenu(altoMenuController.isMenuVisible)" ng-class="{'active': altoMenuController.isMenuVisible}">
     <span class="menu-ico-1"></span>
     <span class="menu-ico-2"></span>
     <span class="menu-ico-3"></span>
@@ -10,22 +11,35 @@
     </span>
 </span>
 
+<!-- The menu -->
 <nav role="navigation" ng-if="altoMenuController.isMenuVisible">
-    <span class="navigation-close" ng-click="altoMenuController.hideMenu()">Fermer</span>
+
+    <!-- Display this menu when the user is not conencted -->
     <ul ng-if="!altoMenuController.isUserConnected(altoMenuController.user)">
         <li>
-            <a ui-sref="home" ng-click="altoMenuController.hideMenu()">Home</a>
+            <a ui-sref="home" ng-click="altoMenuController.showHideMenu(altoMenuController.isMenuVisible)">Home</a>
         </li>
         <li>
-            <a ui-sref="signin" ng-click="altoMenuController.hideMenu()">Sign In</a>
+            <a ui-sref="signIn" ng-click="altoMenuController.showHideMenu(altoMenuController.isMenuVisible)">Sign In</a>
         </li>
         <li>
-            <a ui-sref="signup" ng-click="altoMenuController.hideMenu()">Sign Up</a>
+            <a ui-sref="register" ng-click="altoMenuController.showHideMenu(altoMenuController.isMenuVisible)">Register</a>
         </li>
     </ul>
+
+    <!-- Display this menu when the user is conencted -->
     <ul ng-if="altoMenuController.isUserConnected(altoMenuController.user)">
         <li>
-            <a ui-sref="signoff" ng-click="altoMenuController.hideMenu()">Sign Off</a>
+            <a ui-sref="signOut" ng-click="altoMenuController.showHideMenu(altoMenuController.isMenuVisible)">Sign out</a>
+        </li>
+        <li>
+            <a ui-sref="userProjects" ng-click="altoMenuController.showHideMenu(altoMenuController.isMenuVisible)">Your Projects</a>
+        </li>
+        <li>
+            <a ui-sref="openSourceProjects" ng-click="altoMenuController.showHideMenu(altoMenuController.isMenuVisible)">Open Source Projects</a>
+        </li>
+        <li>
+            <a ui-sref="userAccount" ng-click="altoMenuController.showHideMenu(altoMenuController.isMenuVisible)">Your account</a>
         </li>
     </ul>
 </nav>

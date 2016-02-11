@@ -28,17 +28,13 @@
          /*************************
          *     PUBLIC METHOD      *
          **************************/
-         vm.showMenu = showMenu;
-         vm.hideMenu = hideMenu;
+         vm.showHideMenu = showHideMenu;
          vm.isUserConnected = isUserConnected;
 
-         function showMenu() {
-            vm.isMenuVisible = true;
+         function showHideMenu(isMenuVisible) {
+            vm.isMenuVisible = !isMenuVisible;
          }
 
-         function hideMenu() {
-            vm.isMenuVisible = false;
-         }
 
          function isUserConnected() {
             if(angular.equals({}, vm.user)){

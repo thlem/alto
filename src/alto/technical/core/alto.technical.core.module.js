@@ -10,6 +10,7 @@
         'alto.menu',
         'alto.home',
         'alto.signin',
+        'alto.signout',
         'alto.notifications'
     ]);
 

@@ -38,7 +38,7 @@
                 // The number of iteration to have 100% progress
                 var intervalIterationNumber = 41;
                 // 3000 is 3sec
-                var intervalLimit = 3000 / intervalIterationNumber;
+                var intervalLimit = 4000 / intervalIterationNumber;
                 // The percentage step by step progression
                 var progressPercentageGap = 2.5;
 
