@@ -3,7 +3,7 @@
 
     /**
      * Module      : alto.technical
-     * Description : This module load all technical modules.
+     * Description : This module load all technical modules
      */
     angular.module('alto.technical', [
         /** Alto modules */

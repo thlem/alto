@@ -1,6 +1,7 @@
 <div class="notifications">
     
     <ul>
+        <!-- Repeat on all notifications populate in the notification model -->
         <notification   ng-repeat="(key, notification) in notificationsController.notifications"
                         current-notification="notification"
                         current-notification-key="key">

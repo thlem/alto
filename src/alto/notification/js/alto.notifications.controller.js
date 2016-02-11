@@ -2,20 +2,23 @@
     'use strict';
 
     /**
-     * Module      : alto.notification
+     * Module      : alto.notifications
      * Controller  : NotificationController
-     * Description : ControllerDescription
+     * Description : This controller bind the notifications array to be displayed
      */
     angular.module('alto.notifications').controller('NotificationsController', NotificationsController);
 
     /* @ngInject */
-    function NotificationsController($log, NotificationModel) {
+    function NotificationsController(NotificationModel) {
         
         /*************************
          *     PUBLIC VARIABLE    *
          **************************/
+
         /* jshint validthis: true */
         var vm = this;
+
+        // Bind to the NotificationModel Object Array
         vm.notifications = NotificationModel;
 
         /*************************
@@ -26,11 +29,7 @@
          /*************************
          *     PUBLIC METHOD      *
          **************************/
-         vm.deleteNotification = deleteNotification;
 
-         function deleteNotification(notificationKey){
-            vm.notifications.splice(notificationKey, 1);
-         }
 
          /*************************
          *     PRIVATE METHOD     *

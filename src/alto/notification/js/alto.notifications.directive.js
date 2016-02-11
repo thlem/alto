@@ -2,9 +2,9 @@
     'use strict';
 
     /**
-     * Module      : alto.notification
-     * Directive  : notifications
-     * Description : directiveDescription
+     * Module      : alto.notifications
+     * Directive   : notifications
+     * Description : This directive load the template that display notifications
      */
     angular.module('alto.notifications').directive('notifications', notifications);
 
@@ -12,6 +12,7 @@
     function notifications() {
         
         var directive = {
+
             bindToController: true,
             controller: 'NotificationsController',
             controllerAs: 'notificationsController',
@@ -19,6 +20,7 @@
             templateUrl: 'alto/notification/alto.notifications.html',
             scope: {},
             link: function() {}
+            
         };
 
         return directive;
