@@ -11,7 +11,8 @@
         'alto.home',
         'alto.signin',
         'alto.signout',
-        'alto.notifications'
+        'alto.notifications',
+        'alto.projects'
     ]);
 
 })();

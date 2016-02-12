@@ -70,7 +70,7 @@
         transform: translate(17px, 17px) rotate(-40deg);
     }
     to{
-        transform: translate(8px, -8px) rotate(-35deg);
+        transform: translate(8px, -13px) rotate(-35deg);
         opacity:1;
     }
 }
@@ -98,7 +98,7 @@
         transform: translate(32px, 10px) rotate(-15deg);
     }
     to{
-        transform: translate(26px, -14px) rotate(-5deg);
+        transform: translate(26px, -18px) rotate(-5deg);
         opacity:1;
     }
 }
@@ -113,7 +113,7 @@
         transform: translate(32px, 10px) rotate(-15deg);
     }
     to{
-        transform: translate(41px, -14px) rotate(12deg);
+        transform: translate(41px, -18px) rotate(12deg);
         opacity:1;
     }
 }
@@ -141,7 +141,7 @@
         transform: translate(62px, 22px) rotate(68deg);
     }
     to{
-        transform: translate(55px, -9px) rotate(25deg);
+        transform: translate(55px, -13px) rotate(25deg);
         opacity:1;
     }
 }

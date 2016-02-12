@@ -9,7 +9,7 @@
     angular.module('alto.menu').controller('AltoMenuController', AltoMenuController);
 
     /* @ngInject */
-    function AltoMenuController($log, UserModel) {
+    function AltoMenuController($log, UserModel, $rootScope) {
         
         /*************************
          *     PUBLIC VARIABLE    *
@@ -33,6 +33,9 @@
 
          function showHideMenu(isMenuVisible) {
             vm.isMenuVisible = !isMenuVisible;
+
+            // Fire an event to notify that the menu has been show or hide
+            $rootScope.$emit('alto.menu.interact', vm.isMenuVisible);
          }
 
 

@@ -6,6 +6,7 @@
 .notifications ul {
     max-width: 200px;
     overflow:hidden;
+    list-style: none;
 }
 .notifications ul li {
     width:175px;
