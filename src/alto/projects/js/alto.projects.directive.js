@@ -3,20 +3,21 @@
 
     /**
      * Module      : alto.projects
-     * Directive  : projectList
+     * Directive  : projects
      * Description : directiveDescription
      */
-    angular.module('alto.projects').directive('projectList', projectList);
+    angular.module('alto.projects').directive('projects', projects);
 
     /* @ngInject */
-    function projectList($log) {
+    function projects($log) {
         
         var directive = {
             bindToController: true,
-            controller: 'ProjectListController',
-            controllerAs: 'projectListController',
+            controller: 'ProjectsController',
+            controllerAs: 'projectsController',
             restrict: 'EA',
-            templateUrl: 'alto/projects/alto.project.list.html',
+            replace: true,
+            templateUrl: 'alto/projects/alto.projects.html',
             scope: {},
             link: function() {}
         };

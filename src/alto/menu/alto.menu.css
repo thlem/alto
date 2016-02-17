@@ -178,5 +178,5 @@ nav ul li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: right;
+    text-align: center;
 }

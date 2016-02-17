@@ -22,9 +22,6 @@ body {
     margin-top:20px;
     
 }
-.global-wrapper.adapat-menu > div {
-    margin-left:130px;
-}
 header {
     position:absolute;
     transform: transform(0, 0);

@@ -16,6 +16,7 @@
             bindToController: true,
             controllerAs: 'currentNotificationController',
             restrict: 'EA',
+            replace: true,
             templateUrl: 'alto/notification/alto.notification.html',
             scope: {
                 // The notification object that contains the type and the message

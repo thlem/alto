@@ -16,6 +16,7 @@
             controller: 'AltoMenuController',
             controllerAs: 'altoMenuController',
             restrict: 'EA',
+            replace: true,
             templateUrl: 'alto/menu/alto.menu.html',
             scope: {},
             link: function() {}
